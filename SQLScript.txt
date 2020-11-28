@@ -1,0 +1,14 @@
+create table scores(
+	id int NOT NULL AUTO_INCREMENT,
+	score int NOT NULL,
+	user_id int NOT NULL,
+	PRIMARY KEY (id),
+	FOREIGN KEY (user_id) REFERENCES users(id)
+);
+
+create table users(
+	id int NOT NULL AUTO_INCREMENT,
+	username longtext NOT NULL,
+	password longtext NOT NULL,
+	PRIMARY KEY (id)
+);
